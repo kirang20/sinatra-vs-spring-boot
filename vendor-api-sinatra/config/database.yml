@@ -1,0 +1,17 @@
+default: &default
+  adapter: sqlite3
+  encoding: unicode
+  pool: 5
+  database: 10i-development
+  timeout: 5000
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: 10i_test
+
+production:
+  <<: *default
+  database: 10i
